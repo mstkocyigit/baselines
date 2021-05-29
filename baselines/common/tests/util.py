@@ -5,7 +5,7 @@ from baselines.common.vec_env.dummy_vec_env import DummyVecEnv
 N_TRIALS = 10000
 N_EPISODES = 100
 
-_sess_config = tf.ConfigProto(
+_sess_config = tf.compat.v1.ConfigProto(
     allow_soft_placement=True,
     intra_op_parallelism_threads=1,
     inter_op_parallelism_threads=1
